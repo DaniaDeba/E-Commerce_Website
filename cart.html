@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-COMMERCE WEBSITE </title>
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+<div class="top-nav-bar">
+<div class="search-box">
+	<i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
+	<i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
+<a href="index.html"><img src="C:\Users\abdullah\Downloads/dd.png" class="dd"></a>
+<input type="text" class="form-control">
+<span class="input-group-text"><i class="fa fa-search"></i></span>
+</div>
+<div class="menu-bar">
+	<ul>
+		<li><a href="#"><i class="fa fa-shopping-basket"></i>cart</a></li>
+		<li><a href="#">Sign Up</a></li>
+		<li><a href="#">Log In</a></li>
+	</ul>
+	
+</div>
+</div>
+
+<!-- ==============cart starts here============== -->
+<section class="cart py-5 my-5" id="cart">
+<div class="container ">
+<div class="section_title text-center mb-5">
+<h1 class="text-capitalize">Cart</h1>
+</div>
+<div class="row bg_cart_1 rounded">
+<!--Grid column-->
+<div class="col-md-8 border-right">
+<!-- Card -->
+<div class="mb-3">
+<div class="pt-4">
+<h5 class="mb-4">Cart (<span>2</span> items)</h5>
+<div class="row mb-4">
+<div class="col-md-5 col-lg-3 col-xl-3">
+<div class="rounded mb-3 mb-md-0">
+<img class="img-fluid w-100 rounded"
+src="C:\Users\abdullah\Downloads/b.jpg"
+alt="Sample">
+</div>
+</div>
+<div class="col-md-7 col-lg-9 col-xl-9">
+<div>
+<div class="d-flex justify-content-between">
+<div>
+<h5>Blue denim shirt</h5>
+<p class="mb-3 text-muted text-uppercase small">Shirt -
+blue</p>
+<p class="mb-2 text-muted text-uppercase small">Color:
+blue</p>
+<p class="mb-3 text-muted text-uppercase small">Size:
+M</p>
+</div>
+<div>
+<div class="mb-0 w-100">
+<button
+onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+class="btn btn-sm btn-outline-primary">
+<i class="fas fa-minus"></i>
+</button>
+<input class="quantity text-center" min="0" max="10"
+name="quantity"
+value="1" type="number">
+<button
+onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+class="btn btn-sm btn-outline-primary">
+<i class="fas fa-plus"></i>
+</button>
+</div>
+<small class="form-text text-muted text-center">
+(Note, 1 piece)
+</small>
+</div>
+</div>
+<div class="d-flex justify-content-between align-items-center">
+<div>
+<a href="javascript:;" type="button"
+class="small text-uppercase mr-3"><i
+class="fas fa-trash-alt mr-1"></i> Remove item </a>
+</div>
+<p class="mb-0"><span><strong
+id="summary">$30.00</strong></span></p
+class="mb-0">
+</div>
+</div>
+</div>
+</div>
+<hr class="mb-4">
+<div class="row mb-4">
+<div class="col-md-5 col-lg-3 col-xl-3">
+<div class="rounded mb-3 mb-md-0">
+<img class="img-fluid w-100 rounded"
+src="C:\Users\abdullah\Downloads/red.jpg"
+alt="Sample">
+</div>
+</div>
+<div class="col-md-7 col-lg-9 col-xl-9">
+<div>
+<div class="d-flex justify-content-between">
+<div>
+<h5>Red hoodie</h5>
+<p class="mb-3 text-muted text-uppercase small">Shirt -
+red</p>
+<p class="mb-2 text-muted text-uppercase small">Color:
+red</p>
+<p class="mb-3 text-muted text-uppercase small">Size:
+M</p>
+</div>
+<div>
+<div class="mb-0 w-100">
+<button
+onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+class="btn btn-sm btn-outline-primary">
+<i class="fas fa-minus"></i>
+</button>
+<input class="quantity text-center" min="0" max="10"
+name="quantity"
+value="1" type="number">
+<button
+onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+class="btn btn-sm btn-outline-primary">
+<i class="fas fa-plus"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="d-flex justify-content-between align-items-center">
+<div>
+<a href="javascript:;" type="button"
+class="card-link-secondary small text-uppercase mr-3">
+<i class="fas fa-trash-alt mr-1"></i> Remove item
+</a>
+</div>
+<p class="mb-0"><span><strong>$25.00</strong></span></p
+class="mb-0">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--Grid column-->
+<!--Grid column-->
+<div class="col-md-4 rounded">
+<!-- Card -->
+<div class="mb-3">
+<div class="pt-4">
+<h5 class="mb-3">Order summary</h5>
+<ul class="list-group list-group-flush">
+<li
+class="list-group-item d-flex justify-content-between
+align-items-center border-0 px-0 pb-2">
+<span>Product name 1</span>
+<span>x2</span>
+<span>$30.00</span>
+</li>
+<li
+class="list-group-item d-flex justify-content-between
+align-items-center border-0 px-0 pb-2">
+<span>Product name 2</span>
+<span>x2</span>
+<span>$25.00</span>
+</li>
+<li
+class="list-group-item d-flex justify-content-between
+align-items-center border-top px-0 mb-3">
+<div>
+<strong>Total amount</strong>
+<strong>
+<p class="mb-0">(including VAT)</p>
+</strong>
+</div>
+<span><strong>$55.00</strong></span>
+</li>
+</ul>
+<a href="checkout.html" class="btn btn-primary btn-block">Go to
+Checkout</a>
+</div>
+</div>
+<!-- Card -->
+</div>
+<!--Grid column-->
+</div>
+</div>
+</section>
+<!-- ==============cart ends here============== -->
+
+<!-------footer------>
+<section class="footer">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-mde-3">
+				<h1>Useful Links</h1>
+				<p>Privacy Policy</p>
+				<p>Terms of Use</p>
+				<p>Return Policy</p>
+				<p>Discount Coupons</p>
+			</div>
+			<div class="col-mde-3">
+				<h1>Company</h1>
+				<p>About Us</p>
+				<p>Contact Us</p>
+				<p>Career</p>
+				<p>Affiliate</p>
+			</div>
+			<div class="col-mde-3">
+				<h1>Follow Us On</h1>
+				<p><i class="fa fa-twitter"></i>Twitter</p>
+				<p><i class="fa fa-facebook-official"></i>Facebook</p>
+				<p><i class="fa fa-linkedin"></i>Linkedin</p>
+				<p><i class="fa fa-youtube-play"></i>YouTube</p>
+			</div>
+			
+			<div class="col-md-3 footer-image">
+				<h1>Download App</h1>
+				<img src="C:\Users\abdullah\Downloads/download.png">
+			</div>
+
+		</div>
+		<hr>
+		<p class="copyright">Made with love <i class="fa fa-heart-o"></i>by dania</p>
+	</div>
+
+
+</section>
+
+
+
+<script>
+	function openmenu()
+	{
+		document.getElementById("side-menu").style.display="block";
+		document.getElementById("menu-btn").style.display="none";
+		document.getElementById("close-btn").style.display="block";
+	}
+	function closemenu()
+	{
+		document.getElementById("side-menu").style.display="none";
+		document.getElementById("menu-btn").style.display="block";
+		document.getElementById("close-btn").style.display="none";
+	}
+</script>
+
+
+
+
+
+</body>
+</html>
